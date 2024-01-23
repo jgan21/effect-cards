@@ -11,7 +11,15 @@ import React from "react";
  * Deck -> Card
  */
 
-function Card(){
+function Card({ card }){
+
+  if(!card) return
+
+  return(
+    <div className="Card">
+      <img src={card.image} alt={`${card.value} ${card.suit}`}/>
+    </div>
+  )
 
 }
 
